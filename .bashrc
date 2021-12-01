@@ -103,6 +103,38 @@ source $OSH/oh-my-bash.sh
 # alias ohmybash="mate ~/.oh-my-bash"
 
 
+function nav {
+
+	case $1 in
+		bin)
+			cd $PREFIX/bin/
+			ls
+	    	;;
+	    oh-my | ohmybash)
+	    	cd ~/.oh-my-bash/
+	    	ls
+	    	;;
+		py | python)
+	    	cd ~/pythonD/
+	    	ls
+	        ;;
+	    git | github)
+	    	cd ~/github/
+	    	ls
+	    	;;
+	    doc | document)
+	    	cd ~/documents/
+	    	ls
+	    	;;
+		*)
+			printf " bin\n py\n oh-my\n git\n doc\n\n"
+			echo -n "Enter valid dir: "
+			read NEW
+			nav $NEW
+			;;
+	esac       
+}
+
 # Start up
 clear
 date
