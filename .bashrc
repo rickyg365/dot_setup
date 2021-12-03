@@ -135,6 +135,49 @@ function nav {
 	esac       
 }
 
+function gitgud {
+	ADD=0
+	COMMIT=0
+	PUSH=0
+	
+	commit_msg=$1
+	
+	echo "initiate"
+	case $1 in
+		-a | 'a')
+			ADD=1
+			;;
+		-c | c)
+			COMMIT=1
+			;;
+		*)
+			ADD=1
+			COMMIT=1
+			PUSH=1
+			;;
+	esac
+	echo "case"
+	if [ "$ADD" == "1" ]
+	then
+		git add .
+	fi
+	
+	if [ "$COMMIT" = 1 ]
+	then
+		git commit -m "$commit_msg"
+	fi
+	echo "conditional"
+	git status
+	
+	read -p "Push?: " PUSH
+
+	if [ $PUSH == "y" ]
+	then
+		git push
+	fi
+	
+}
+
 # Start up
 clear
 date
