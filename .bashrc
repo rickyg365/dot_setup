@@ -136,13 +136,14 @@ function nav {
 }
 
 function gitgud {
+	# Variables (state)
 	ADD=0
 	COMMIT=0
 	PUSH=0
 	
 	commit_msg=$1
-	
-	echo "initiate"
+
+	# Flags
 	case $1 in
 		-a | 'a')
 			ADD=1
@@ -156,7 +157,8 @@ function gitgud {
 			PUSH=1
 			;;
 	esac
-	echo "case"
+
+	# Actions add & commit
 	if [ "$ADD" == "1" ]
 	then
 		git add .
@@ -166,14 +168,18 @@ function gitgud {
 	then
 		git commit -m "$commit_msg"
 	fi
-	echo "conditional"
+
+	# Status
 	git status
-	
+
+	# Push
 	read -p "Push?: " PUSH
 
 	if [ $PUSH == "y" ]
 	then
 		git push
+		# Status
+		git status
 	fi
 	
 }
