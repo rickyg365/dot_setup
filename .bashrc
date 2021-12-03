@@ -136,7 +136,7 @@ function nav {
 }
 
 function gitgud {
-	# Variables (state)
+	# Variables (default_state = 0 | false)
 	ADD=0
 	COMMIT=0
 	PUSH=0
