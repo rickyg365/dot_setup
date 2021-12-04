@@ -135,10 +135,16 @@ function nav {
 	esac       
 }
 
+function mnav {
+	nav $1
+	cd $2
+	ls
+}
+
 function gitgud {
-	# Variables (default_state = 0 | false)
-	ADD=0
-	COMMIT=0
+	# Variables (default_state = 1 | true)
+	ADD=1
+	COMMIT=1
 	PUSH=0
 	
 	commit_msg=$1
@@ -146,15 +152,12 @@ function gitgud {
 	# Flags
 	case $1 in
 		-a | 'a')
-			ADD=1
+			COMMIT=0
 			;;
 		-c | c)
-			COMMIT=1
+			ADD=0
 			;;
 		*)
-			ADD=1
-			COMMIT=1
-			PUSH=1
 			;;
 	esac
 
