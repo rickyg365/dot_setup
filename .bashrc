@@ -127,10 +127,12 @@ function nav {
 	    	ls
 	    	;;
 		*)
-			printf " bin\n py\n oh-my\n git\n doc\n\n"
-			echo -n "Enter valid dir: "
-			read NEW
-			nav $NEW
+			# printf " bin\n py\n oh-my\n git\n doc\n\n"
+			# echo -n "Enter valid dir: "
+			# read NEW
+			# nav $NEW
+			cd $1
+			ls
 			;;
 	esac       
 }
