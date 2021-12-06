@@ -101,7 +101,129 @@ source $OSH/oh-my-bash.sh
 # alias bashconfig="mate ~/.bashrc"
 # alias ohmybash="mate ~/.oh-my-bash"
 
-source "~/shortcuts/mastercode.sh"
+
+# Did not work
+# source "~/shortcuts/mastercode.sh"
+
+# Custom Utilities, 
+# didnt like having to source and had all sorts of issues, look into alt methods later
+# so adding as functions here for now, still have script files saved
+function nav {  
+  CASES=(
+    "github",
+    "bin",
+    "oh-my-bash",
+    "python",
+    "documents",
+    "rust",
+    "shortcuts",
+    "help"
+    )
+  
+  case $1 in
+    bin)
+      cd $PREFIX/bin/
+      ls
+      ;;
+    oh-my | ohmybash)
+      cd ~/.oh-my-bash/
+      ls
+      ;;
+    py | python)
+      cd ~/pythonD/
+      ls
+      ;;
+    rust)
+      cd ~/rust/
+      ls
+      ;;
+    git | github)
+      cd ~/github/
+      ls
+      ;;
+    short | shortcuts)
+      cd ~/shortcuts/
+      ls
+      ;;
+    doc | document)
+      cd ~/documents/
+      ls
+      ;;
+    
+    h | help)
+      for use_case in "${CASES[@]}"; do
+        echo "\n> $use_case"
+      echo -n "\nEnter valid entry: "
+      read NEW
+      nav $NEW
+      ;;
+    *)  
+      echo "unable to find entry"
+      cd $1
+      ls
+      ;;
+  esac       
+}
+
+function mnav {
+  # if less than 2 args fail
+  if [[ ($# -ne 2) ]]; then
+      echo "must use 2 args\n mnav arg1 arg2"
+      exit 1
+  fi
+  nav $1
+  cd $2
+  ls
+}
+
+function gitgud {    
+  # Variables (default_state = 1 | true)
+  ADD=1
+  COMMIT=1
+  PUSH=0
+
+  commit_msg=$1
+
+  if [[ $# -ne 1 ]]; then
+    commit_msg=$2
+  fi
+
+  # Flags
+  case $1 in
+    -a | 'a')
+      COMMIT=0
+      ;;
+    -c | c)
+      ADD=0
+      ;;
+    *)
+      ;;
+  esac
+
+  # Actions add & commit
+  if [ "$ADD" == "1" ]
+  then
+    git add .
+  fi
+
+  if [ "$COMMIT" = 1 ]
+  then
+    git commit -m "$commit_msg"
+  fi
+
+  # Check Status
+  git status
+
+  # Manually decide to push or not
+  read -p "Push?: " PUSH
+
+  if [ $PUSH == "y" ]
+  then
+    git push
+    git status
+  fi
+}
+
 
 # Start up
 clear
