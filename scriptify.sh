@@ -1,4 +1,4 @@
-#!/$PREFIX/bin/bash
+#!/bin/bash
 
 # Takes in 2 args og_file_name, new_name
 
