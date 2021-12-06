@@ -47,6 +47,7 @@ function nav {
 			echo -n "\nEnter valid entry: "
 			read NEW
 			nav $NEW
+			;;
         *)  
             echo "unable to find entry"
 			cd $1
