@@ -105,9 +105,9 @@ clear
 # Did not work
 # source "~/shortcuts/mastercode.sh"
 
-# Custom Utilities, 
-# didnt like having to source and had all sorts of issues, look into alt methods later
-# so adding as functions here for now, still have script files saved
+# Custom Utilities
+# still have script files saved didnt like having to source and had all sorts of issues, look into alt methods later
+# so adding as functions here for now
 function nav {  
   CASES=(
     "github",
@@ -117,6 +117,7 @@ function nav {
     "documents",
     "rust",
     "shortcuts",
+    "phone",
     "help"
     )
   
@@ -149,7 +150,10 @@ function nav {
       cd ~/documents/
       ls
       ;;
-    
+    ph | phone)
+      cd ~/storage/
+      ls
+      ;;
     h | help)
       for use_case in "${CASES[@]}"; do
         echo "> $use_case"
