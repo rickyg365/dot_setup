@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "\nand now...\n"
+printf "\nand now...\n"
 sleep 2
 printf "this world shall know PAIN (x_x)\n"
 # Loops through git directories, then refreshes each
