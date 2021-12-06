@@ -1,8 +1,9 @@
 #!/bin/bash
 
 printf "\nand now...\n"
-sleep 2
+sleep 1
 printf "this world shall know PAIN (x_x)\n"
+sleep 1
 # Loops through git directories, then refreshes each
 for file in */.git; do
 	# cd to correct path
