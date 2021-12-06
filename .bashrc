@@ -101,7 +101,7 @@ source $OSH/oh-my-bash.sh
 # alias bashconfig="mate ~/.bashrc"
 # alias ohmybash="mate ~/.oh-my-bash"
 
-
+clear
 # Did not work
 # source "~/shortcuts/mastercode.sh"
 
@@ -152,9 +152,9 @@ function nav {
     
     h | help)
       for use_case in "${CASES[@]}"; do
-        echo "\n> $use_case"
+        echo "> $use_case"
       done
-      echo -n "\nEnter valid entry: "
+      echo -n "Enter valid entry: "
       read NEW
       nav $NEW
       ;;
@@ -227,7 +227,7 @@ function gitgud {
 
 
 # Start up
-clear
+# clear
 date
 neofetch
 ls
