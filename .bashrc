@@ -153,6 +153,7 @@ function nav {
     h | help)
       for use_case in "${CASES[@]}"; do
         echo "\n> $use_case"
+      done
       echo -n "\nEnter valid entry: "
       read NEW
       nav $NEW
