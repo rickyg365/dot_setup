@@ -11,8 +11,5 @@ BIN_PATH=$PREFIX/bin
 OG_FILE=$1
 NEW_NAME=$2
 
-# chmod +x file
-chmod +x $OG_FILE
-
 ln -s ${PWD}/$OG_FILE $BIN_PATH/$NEW_NAME
 
