@@ -1,50 +1,47 @@
 #!/bin/bash
 
-function gitgud {
-	# Variables (default_state = 1 | true)
-	ADD=1
-	COMMIT=1
-	PUSH=0
-	
-	commit_msg=$1
+# Variables (default_state = 1 | true)
+ADD=1
+COMMIT=1
+PUSH=0
 
-    if [[ $# -ne 1 ]]; then
-        commit_msg=$2
-    fi
+commit_msg=$1
 
-	# Flags
-	case $1 in
-		-a | 'a')
-			COMMIT=0
-			;;
-		-c | c)
-			ADD=0
-			;;
-		*)
-			;;
-	esac
+if [[ $# -ne 1 ]]; then
+	commit_msg=$2
+fi
 
-	# Actions add & commit
-	if [ "$ADD" == "1" ]
-	then
-		git add .
-	fi
-	
-	if [ "$COMMIT" = 1 ]
-	then
-		git commit -m "$commit_msg"
-	fi
+# Flags
+case $1 in
+	-a | 'a')
+		COMMIT=0
+		;;
+	-c | c)
+		ADD=0
+		;;
+	*)
+		;;
+esac
 
-	# Check Status
+# Actions add & commit
+if [ "$ADD" == "1" ]
+then
+	git add .
+fi
+
+if [ "$COMMIT" = 1 ]
+then
+	git commit -m "$commit_msg"
+fi
+
+# Check Status
+git status
+
+# Manually decide to push or not
+read -p "Push?: " PUSH
+
+if [ $PUSH == "y" ]
+then
+	git push
 	git status
-
-	# Manually decide to push or not
-	read -p "Push?: " PUSH
-
-	if [ $PUSH == "y" ]
-	then
-		git push
-		git status
-	fi
-	
-}
+fi
