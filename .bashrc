@@ -101,7 +101,7 @@ source $OSH/oh-my-bash.sh
 # alias bashconfig="mate ~/.bashrc"
 # alias ohmybash="mate ~/.oh-my-bash"
 
-
+source "~/shortcuts/mastercode.sh"
 
 # Start up
 clear
