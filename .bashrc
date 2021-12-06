@@ -230,5 +230,9 @@ function gitgud {
 # clear
 date
 neofetch
+# echo ""
+# curl -s wttr.in/Moon?0
+curl -s wttr.in/San+Francisco?0
+echo ""
+# neofetch
 ls
-
