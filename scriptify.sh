@@ -8,8 +8,8 @@ OG_FILE=$1
 chmod +x $OG_FILE
 
 if [[ $# -ne 2 ]]; then
-    cp OG_FILE $BIN_PATH/
+    cp $OG_FILE $BIN_PATH/
 else
     NEW_NAME=$2
-    cp OG_FILE $BIN_PATH/$NEW_NAME
+    cp $OG_FILE $BIN_PATH/$NEW_NAME
 fi
