@@ -24,10 +24,18 @@ function nav {
 	    	cd ~/pythonD/
 	    	ls
 	        ;;
+		rust)
+	    	cd ~/rust/
+	    	ls
+	        ;;
 	    git | github)
 	    	cd ~/github/
 	    	ls
 	    	;;
+		short | shortcuts)
+	    	cd ~/shortcuts/
+	    	ls
+	        ;;
 	    doc | document)
 	    	cd ~/documents/
 	    	ls
