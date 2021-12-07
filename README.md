@@ -1,4 +1,4 @@
-# termux_setup
+# Termux Setup
 my termux setup
 
 ## Using 
