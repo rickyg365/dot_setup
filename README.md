@@ -3,7 +3,11 @@ my termux setup
 
 * oh-my-bash
 * bash.bashrc
+
 ## Custom functions
- * navigation
- * git
+ - navigation
+ - git
  - link/script making shortcut
+
+## Directory Setup
+HOME -> documents | python | rust | github | shortcuts 
