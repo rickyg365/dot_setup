@@ -1,8 +1,9 @@
 # termux_setup
 my termux setup
 
+## Using 
 * oh-my-bash
-* bash.bashrc
+* bash
 
 ## Custom functions
  - navigation
