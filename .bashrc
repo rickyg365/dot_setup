@@ -105,9 +105,9 @@ clear
 # Did not work
 # source "~/shortcuts/mastercode.sh"
 
-# Custom Utilities
-# still have script files saved didnt like having to source and had all sorts of issues, look into alt methods later
-# so adding as functions here for now
+# Custom Utilities, 
+# didnt like having to source and had all sorts of issues, look into alt methods later
+# so adding as functions here for now, still have script files saved
 function nav {  
   CASES=(
     "github",
@@ -117,7 +117,6 @@ function nav {
     "documents",
     "rust",
     "shortcuts",
-    "phone",
     "help"
     )
   
@@ -131,7 +130,7 @@ function nav {
       ls
       ;;
     py | python)
-      cd ~/pythonD/
+      cd ~/python/
       ls
       ;;
     rust)
@@ -150,10 +149,7 @@ function nav {
       cd ~/documents/
       ls
       ;;
-    ph | phone)
-      cd ~/storage/
-      ls
-      ;;
+    
     h | help)
       for use_case in "${CASES[@]}"; do
         echo "> $use_case"
@@ -163,7 +159,7 @@ function nav {
       nav $NEW
       ;;
     *)  
-      echo "unable to find entry"
+      echo "unable to find entry "
       cd $1
       ls
       ;;
@@ -231,6 +227,7 @@ function gitgud {
 
 
 # Start up
+export DISPLAY=":1"
 # clear
 date
 neofetch
