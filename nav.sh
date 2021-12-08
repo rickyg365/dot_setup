@@ -22,7 +22,7 @@ oh-my | ohmybash)
 	ls
 	;;
 py | python)
-	cd ~/pythonD/
+	cd ~/python/
 	ls
 	;;
 rust)
