@@ -102,23 +102,30 @@ source $OSH/oh-my-bash.sh
 # alias ohmybash="mate ~/.oh-my-bash"
 
 
-# Custom
-
+# Custom Config
 clear
+
 # Add paths
 export PATH="$PATH:~/scripts"
 
+# VNC Display
 export DISPLAY=":1"
 
 # Alias
 
-# Dont need full path bcuz of path export above
-
-# alias nav=". ~/scripts/nav.sh"
-# alias mnav=". ~/scripts/mnav.sh"
-
+## > Sourced
 alias nav=". nav.sh"
 alias mnav=". mnav.sh"
+alias fnav=". f_nav.sh"
+
+## > Not Sourced
+alias allmightypull="all_pull.sh"
+alias gitgud="gitgud.sh"
+
+alias linkify="linkify.sh"
+alias scriptify="scriptify.sh"
+
+alias tmucs="tmucs.sh"
 
 
 # Start up

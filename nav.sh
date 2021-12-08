@@ -45,13 +45,9 @@ ph | phone)
 	cd ~/storage/
 	ls
 	;;
-ph | phone)
-	cd ~/storage/
-	ls
-	;;
 h | help)
 	for use_case in "${CASES[@]}"; do
-	echo "> $use_case"
+		echo "> $use_case"
 	done
 	echo -n "Enter valid entry: "
 	read NEW

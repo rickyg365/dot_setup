@@ -37,6 +37,8 @@ fi
 # Check Status
 git status
 
+echo "" # for spacing
+
 # Manually decide to push or not
 read -p "Push?: " PUSH
 

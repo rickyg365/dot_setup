@@ -1,6 +1,8 @@
 #!/bin/bash
+
+# Takes in 1 or 2 args og_file_name, new_name*
 # Make sure file is given exec privlege before running script
-# Takes in 2 args og_file_name, new_name
+
 BIN_PATH=$PREFIX/bin
 OG_FILE=$1
 
