@@ -41,7 +41,7 @@ doc | document)
 	cd ~/documents/
 	ls
 	;;
-ph | phone)
+ph | phone | phone_storage)
 	cd ~/storage/
 	ls
 	;;
