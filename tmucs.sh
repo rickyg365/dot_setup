@@ -23,3 +23,9 @@ tmux splitw -v -p 25
 tmux selectp -t 2
 tmux send-keys 'cd ~' C-m 'clear && ls' C-m
 
+# select first pane
+tmux selectp -t 0
+
+# # New window
+# tmux new-window -t ${session}:
+# tmux rename-window -t 1 'editor'
