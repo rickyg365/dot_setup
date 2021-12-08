@@ -7,7 +7,7 @@ CASES=(
 "python",
 "documents",
 "rust",
-"shortcuts",
+"scripts",
 "phone",
 "help"
 )
@@ -33,12 +33,16 @@ git | github)
 	cd ~/github/
 	ls
 	;;
-short | shortcuts)
-	cd ~/shortcuts/
+scr | scripts)
+	cd ~/scripts/
 	ls
 	;;
 doc | document)
 	cd ~/documents/
+	ls
+	;;
+ph | phone)
+	cd ~/storage/
 	ls
 	;;
 ph | phone)
