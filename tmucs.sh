@@ -10,16 +10,16 @@ tmux new-session -d -s $session
 tmux rename-window -t 0 'Main'
 
 # Start up work directory
-tmux send-keys -t 'Main' 'clear' C-m 'cd ~' C-m
+tmux send-keys -t 'Main' 'cd ~' C-m 'clear && ls' C-m
 
 tmux splitw -h
 
 # Select pane 2
 tmux selectp -t 1
-tmux send-keys 'clear' C-m 'cd ~ && ls' C-m
+tmux send-keys 'cd ~' C-m 'clear && ls' C-m
 
 # Split pane 2 vertically by 25%
 tmux splitw -v -p 25
 tmux selectp -t 2
-tmux send-keys 'clear' C-m 'cd ~ && ls' C-m
+tmux send-keys 'cd ~' C-m 'clear && ls' C-m
 

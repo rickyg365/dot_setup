@@ -225,7 +225,7 @@ function gitgud {
   fi
 }
 
-export PATH="$PATH:~/documents"
+export PATH="$PATH:~/scripts"
 
 # Start up
 export DISPLAY=":1"
