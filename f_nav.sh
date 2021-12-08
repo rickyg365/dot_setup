@@ -13,12 +13,12 @@ case $chosen in
         cd $PREFIX/bin/
         ls
         ;;
-    oh-my | ohmybash)
+    oh-my | oh-my-bash)
         cd ~/.oh-my-bash/
         ls
         ;;
     py | python)
-        cd ~/pythonD/
+        cd ~/python/
         ls
         ;;
     rust)
@@ -37,7 +37,7 @@ case $chosen in
         cd ~/documents/
         ls
         ;;
-    ph | phone)
+    ph | phone | phone_storage)
         cd ~/storage/
         ls
         ;;
