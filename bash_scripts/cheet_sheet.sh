@@ -16,6 +16,8 @@ tmux new-session -d -s $session
 # Rename Initial Window(0)
 tmux rename-window -t 0 'Main'
 
+tmux a
+
 # Options
 languages=`echo "rust python javascript nodejs typescript c cpp" | tr ' ' '\n'`
 core_utils=`echo "xargs find mv sed awk" | tr ' ' '\n'`
@@ -30,8 +32,8 @@ if printf $languages | grep -qs $selected; then
     # Start up work directory
     echo "curl cht.sh/$selected/`echo $query | tr ' ' '+'`"
     command="curl cht.sh/$selected/`echo $query | tr ' ' '+'`"
-    tmux send-keys -t 'Main' 'clear && ls' C-m "$command" C-m 
-    # curl cht.sh/$selected/`echo $query | tr ' ' '+'`
+    # tmux send-keys -t 'Main' 'clear && ls' C-m "$command" C-m 
+    curl cht.sh/$selected/`echo $query | tr ' ' '+'`
 else
     # Core util
     curl cht.sh/$selected~$query
