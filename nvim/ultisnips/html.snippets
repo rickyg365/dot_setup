@@ -9,3 +9,46 @@ snippet bl
 {% endblock %}
 endsnippet
 
+snippet div
+<div class="$1">
+	$2
+</div>
+endsnippet
+
+snippet p
+<p class="$1">
+	$2
+</p>
+endsnippet
+
+snippet a
+<a href="$1" class="$2">
+	$3
+</a>
+endsnippet
+
+snippet !
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="$1">
+
+    <title>$2</title>
+</head>
+
+<body>
+	<header>
+	</header>
+
+	<main>
+	</main>
+
+	<script src="$4"></script>
+</body>
+</html>
+endsnippet
+
