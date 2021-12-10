@@ -11,7 +11,7 @@
 session="cheet sheet"
 
 # Start session, detached
-tmux new-session -d -s $session
+tmux new-session -s $session
 
 # Rename Initial Window(0)
 tmux rename-window -t 0 'Main'
