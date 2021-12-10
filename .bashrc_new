@@ -127,7 +127,7 @@ alias scriptify="scriptify.sh"
 
 alias tmucs="tmucs.sh"
 alias ta="tmux a"
-alias cht="tmux new-session -d -s 'cheet sheet' /cheet_sheet.sh"
+alias cht="tmux new-session -d -s 'cheet sheet' cheet_sheet.sh"
 
 # Start up
 date
