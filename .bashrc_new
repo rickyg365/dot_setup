@@ -126,7 +126,7 @@ alias linkify="linkify.sh"
 alias scriptify="scriptify.sh"
 
 alias tmucs="tmucs.sh"
-
+alias cht="cheet_sheet.sh"
 
 # Start up
 date
