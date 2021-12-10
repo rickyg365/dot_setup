@@ -16,10 +16,10 @@ selected=`printf "$languages\n$core_utils" | fzf`
 read -p "query: " query
 
 if printf $languages | grep -qs $selected; then
-    tmux neww curl cht.sh/$selected/`echo $query | tr ' ' '+'` & while [ : ]; do sleep 1; done
+    curl cht.sh/$selected/`echo $query | tr ' ' '+'`
 else
     # Core util
-    tmux neww curl cht.sh/$selected~$query & while [ : ]; do sleep 1; done
+    curl cht.sh/$selected~$query
 fi
 
 
