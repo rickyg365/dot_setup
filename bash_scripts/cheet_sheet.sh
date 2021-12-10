@@ -7,6 +7,16 @@
 
 # curl cht.sh/{language}/learn:query+string
 
+# Create new session
+session="cheet sheet"
+
+# Start session, detached
+tmux new-session -s $session
+
+# Rename Initial Window(0)
+tmux rename-window -t 0 'Main'
+
+# Options
 languages=`echo "rust python javascript nodejs typescript c cpp" | tr ' ' '\n'`
 core_utils=`echo "xargs find mv sed awk" | tr ' ' '\n'`
 
@@ -16,7 +26,10 @@ selected=`printf "$languages\n$core_utils" | fzf`
 read -p "query: " query
 
 if printf $languages | grep -qs $selected; then
-    curl cht.sh/$selected/`echo $query | tr ' ' '+'`
+
+    # Start up work directory
+    tmux send-keys -t 'Main' 'curl cht.sh/${selected@Q}/`echo ${query@Q} | tr ' ' '+'`' C-m
+    # curl cht.sh/$selected/`echo $query | tr ' ' '+'`
 else
     # Core util
     curl cht.sh/$selected~$query
