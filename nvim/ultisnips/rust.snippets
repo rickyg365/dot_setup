@@ -1,130 +1,130 @@
 # Functions
 snippet fn "Function definition"
-	fn ${1:function_name}(${2})${3} {
-		${0}
-	}
+fn ${1:function_name}(${2})${3} {
+	${0}
+}
 endsnippet
 
 snippet let "let variable declaration with type inference"
-	let ${1} = ${2};
+let ${1} = ${2};
 endsnippet
 
 snippet letm "let mut variable declaration with type inference"
-	let mut ${1} = ${2};
+let mut ${1} = ${2};
 endsnippet
 
 snippet pri "print!"
-	print!("${1}");
+print!("${1}");
 endsnippet
 
 snippet pln "println!"
-	println!("${1}");
+println!("${1}");
 endsnippet
 
 # Testing
 snippet as "assert!"
-	assert!(${1:predicate});
+assert!(${1:predicate});
 endsnippet
 
 snippet ase "assert_eq!"
-	assert_eq!(${1:expected}, ${2:actual});
+assert_eq!(${1:expected}, ${2:actual});
 endsnippet
 
 snippet test "Unit test function"
-	#[test]
-	fn ${1:function_name}_test() {
-		${0}
-	}
+#[test]
+fn ${1:function_name}_test() {
+	${0}
+}
 endsnippet
 
 snippet res "Result<T, E>"
-	Result<${1:&str}, ${2:()}>
+Result<${1:&str}, ${2:()}>
 endsnippet
 
 # Control structures
 
 snippet if
-	if ${1} {
-		${0:${VISUAL}}
-	}
+if ${1} {
+	${0:${VISUAL}}
+}
 endsnippet
 
 snippet ife "if / else"
-	if ${1} {
-		${2:${VISUAL}}
-	} else {
-		${0}
-	}
+if ${1} {
+	${2:${VISUAL}}
+} else {
+	${0}
+}
 endsnippet
 
 snippet ifl "if let (...)"
-	if let ${1:Some($2)} = $3 {
-		${0:${VISUAL}}
-	}
+if let ${1:Some($2)} = $3 {
+	${0:${VISUAL}}
+}
 endsnippet
 
 snippet el "else"
-	else {
-		${0:${VISUAL}}
-	}
+else {
+	${0:${VISUAL}}
+}
 endsnippet
 
 snippet eli "else if"
-	else if ${1} {
-		${0:${VISUAL}}
-	}
+else if ${1} {
+	${0:${VISUAL}}
+}
 endsnippet
 
 snippet mat "match pattern"
-	match ${1} {
-		${2} => ${3}
-	}
+match ${1} {
+	${2} => ${3}
+}
 endsnippet
 
 snippet case "Case clause of pattern match"
-	${1:_} => ${2:expression}
+${1:_} => ${2:expression}
 endsnippet
 
 
 snippet loop "loop {}" b
-	loop {
-		${0:${VISUAL}}
-	}
+loop {
+	${0:${VISUAL}}
+}
 endsnippet
 
 snippet wh "while loop"
-	while ${1:condition} {
-		${0:${VISUAL}}
-	}
+while ${1:condition} {
+	${0:${VISUAL}}
+}
 endsnippet
 
 snippet for "for ... in ... loop"
-	for ${1:i} in ${2} {
-		${0}
-	}
+for ${1:i} in ${2} {
+	${0}
+}
 endsnippet
 
 # Struct
 snippet st "Struct definition"
-	struct ${1:name} {
-		${0}
-	}
+struct ${1:name} {
+	${0}
+}
 endsnippet
 
 snippet impl "Struct/Trait implementation"
-	impl ${1:Type/Trait}${2: for $3} {
-		${0}
-	}
+impl ${1:Type/Trait}${2: for $3} {
+	${0}
+}
 endsnippet
 
 snippet stn "Struct with new constructor"
-	pub struct ${1:name} {
-		${0}
-	}
+pub struct ${1:name} {
+	${0}
+}
 
-	impl$2 $1$2 {
-		pub fn new(${4}) -> Self {
-			$1 { ${5} }
-		}
+impl$2 $1$2 {
+	pub fn new(${4}) -> Self {
+		$1 { ${5} }
 	}
+}
 endsnippet
