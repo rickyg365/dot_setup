@@ -28,6 +28,7 @@ read -p "query: " query
 if printf $languages | grep -qs $selected; then
 
     # Start up work directory
+    echo "curl cht.sh/$selected/`echo $query | tr ' ' '+'`"
     command=`echo "curl cht.sh/$selected/`echo $query | tr ' ' '+'`"`
     tmux send-keys -t 'Main' 'clear && ls' C-m "$command" C-m 
     # curl cht.sh/$selected/`echo $query | tr ' ' '+'`
