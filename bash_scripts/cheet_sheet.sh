@@ -11,7 +11,7 @@
 session="cheet sheet"
 
 # Start session, detached
-tmux new-session -d -s $session
+tmux new-session -s $session
 
 # Rename Initial Window(0)
 tmux rename-window -t 0 'Main'
@@ -28,7 +28,7 @@ read -p "query: " query
 if printf $languages | grep -qs $selected; then
 
     # Start up work directory
-    tmux send-keys -t 'Main' 'curl cht.sh/${selected@Q}/`echo ${query@Q} | tr ' ' '+'`' C-m
+    curl cht.sh/$selected/`echo $query | tr ' ' '+'` C-m
     # curl cht.sh/$selected/`echo $query | tr ' ' '+'`
 else
     # Core util
