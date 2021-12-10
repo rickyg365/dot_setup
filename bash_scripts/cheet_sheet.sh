@@ -7,16 +7,6 @@
 
 # curl cht.sh/{language}/learn:query+string
 
-# Create new session
-session="cheet sheet"
-
-# Start session, detached
-tmux new-session -d -s $session
-
-# Rename Initial Window(0)
-tmux rename-window -t 0 'Main'
-
-tmux a
 
 # Options
 languages=`echo "rust python javascript nodejs typescript c cpp" | tr ' ' '\n'`
