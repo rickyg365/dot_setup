@@ -52,3 +52,489 @@ snippet !
 </html>
 endsnippet
 
+
+# Attributes
+snippet attr
+	${1:attribute}="${0:property}"
+endsnippet
+
+snippet .
+	class="${1}"
+endsnippet
+
+snippet #
+	id="${1}"
+endsnippet
+
+snippet alt
+	alt="${1}"
+endsnippet
+
+snippet for
+	for="${1}"
+endsnippet
+
+snippet href
+	href="${1:#}"
+endsnippet
+
+snippet src
+	src="${1}"
+endsnippet
+
+
+# Elements
+snippet a
+	<a href="${1:#}">${0:$1}</a>
+endsnippet
+
+snippet a.
+	<a class="${1}" href="${2:#}">${0:$1}</a>
+endsnippet
+
+snippet a#
+	<a id="${1}" href="${2:#}">${0:$1}</a>
+endsnippet
+
+
+snippet br
+	<br>
+endsnippet
+
+snippet button
+	<button type="${1:submit}">${0}</button>
+endsnippet
+
+snippet button.
+	<button class="${1:button}" type="${2:submit}">${0}</button>
+endsnippet
+
+snippet button#
+	<button id="${1}" type="${2:submit}">${0}</button>
+endsnippet
+
+snippet button:s
+	<button type="submit">${0}</button>
+endsnippet
+
+snippet button:r
+	<button type="reset">${0}</button>
+endsnippet
+
+
+
+
+snippet div
+	<div>
+		${0}
+	</div>
+endsnippet
+
+snippet div.
+	<div class="${1}">
+		${0}
+	</div>
+endsnippet
+
+snippet div#
+	<div id="${1}">
+		${0}
+	</div>
+endsnippet
+
+
+snippet footer
+	<footer>
+		${0}
+	</footer>
+endsnippet
+
+
+snippet footer.
+	<footer class="${1}">
+		${0}
+	</footer>
+endsnippet
+
+
+snippet footer#
+	<footer id="${1}">
+		${0}
+	</footer>
+endsnippet
+
+
+snippet form
+	<form action="${1}" method="${2:post}">
+		${0}
+	</form>
+endsnippet
+
+
+snippet form.
+	<form class="${1}" action="${2}" method="${3:post}">
+		${0}
+	</form>
+endsnippet
+
+
+snippet form#
+	<form id="${1}" action="${2}" method="${3:post}">
+		${0}
+	</form>
+endsnippet
+
+
+snippet h1
+	<h1>${0}</h1>
+endsnippet
+
+snippet h1.
+	<h1 class="${1}">${0}</h1>
+endsnippet
+
+snippet h1#
+	<h1 id="${1}">${0}</h1>
+endsnippet
+
+snippet h2
+	<h2>${0}</h2>
+endsnippet
+
+snippet h2.
+	<h2 class="${1}">${0}</h2>
+endsnippet
+
+snippet h2#
+	<h2 id="${1}">${0}</h2>
+endsnippet
+
+snippet h3
+	<h3>${0}</h3>
+endsnippet
+
+snippet h3.
+	<h3 class="${1}">${0}</h3>
+endsnippet
+
+snippet h3#
+	<h3 id="${1}">${0}</h3>
+endsnippet
+
+snippet h4
+	<h4>${0}</h4>
+endsnippet
+
+snippet h4.
+	<h4 class="${1}">${0}</h4>
+endsnippet
+
+snippet h4#
+	<h4 id="${1}">${0}</h4>
+endsnippet
+
+snippet h5
+	<h5>${0}</h5>
+endsnippet
+
+snippet h5.
+	<h5 class="${1}">${0}</h5>
+endsnippet
+
+snippet h5#
+	<h5 id="${1}">${0}</h5>
+endsnippet
+
+snippet h6
+	<h6>${0}</h6>
+endsnippet
+
+snippet h6.
+	<h6 class="${1}">${0}</h6>
+endsnippet
+
+snippet h6#
+	<h6 id="${1}">${0}</h6>
+endsnippet
+
+
+
+
+snippet header
+	<header>
+		${0}
+	</header>
+endsnippet
+
+snippet header.
+	<header class="${1}">
+		${0}
+	</header>
+endsnippet
+
+snippet header#
+	<header id="${1}">
+		${0}
+	</header>
+endsnippet
+
+
+
+snippet img
+	<img src="${1}" alt="${2}">
+endsnippet
+
+snippet img.
+	<img class="${1}" src="${2}" alt="${3}">
+endsnippet
+
+snippet img#
+	<img id="${1}" src="${2}" alt="${3}">
+endsnippet
+
+snippet input
+	<input type="${1:text/submit/hidden/button/image}" name="${2}" id="${3:$2}" value="${4}">
+endsnippet
+
+snippet input.
+	<input class="${1}" type="${2:text/submit/hidden/button/image}" name="${3}" id="${4:$3}" value="${5}">
+endsnippet
+
+
+
+snippet input:text
+	<input type="text" name="${1}" id="${2:$1}" value="${3}">
+endsnippet
+
+snippet input:submit
+	<input type="submit" name="${1}" id="${2:$1}" value="${3}">
+endsnippet
+
+snippet input:hidden
+	<input type="hidden" name="${1}" id="${2:$1}" value="${3}">
+endsnippet
+
+snippet input:button
+	<input type="button" name="${1}" id="${2:$1}" value="${3}">
+endsnippet
+
+snippet input:image
+	<input type="image" name="${1}" id="${2:$1}" src="${3}" alt="${4}">
+endsnippet
+
+snippet input:checkbox
+	<input type="checkbox" name="${1}" id="${2:$1}">
+endsnippet
+
+snippet input:radio
+	<input type="radio" name="${1}" id="${2:$1}">
+endsnippet
+
+snippet input:color
+	<input type="color" name="${1}" id="${2:$1}" value="${3}">
+endsnippet
+
+snippet input:date
+	<input type="date" name="${1}" id="${2:$1}" value="${3}">
+endsnippet
+
+snippet input:datetime
+	<input type="datetime" name="${1}" id="${2:$1}" value="${3}">
+endsnippet
+
+snippet input:datetime-local
+	<input type="datetime-local" name="${1}" id="${2:$1}" value="${3}">
+endsnippet
+
+snippet input:email
+	<input type="email" name="${1}" id="${2:$1}" value="${3}">
+endsnippet
+
+snippet input:file
+	<input type="file" name="${1}" id="${2:$1}" value="${3}">
+endsnippet
+
+snippet input:month
+	<input type="month" name="${1}" id="${2:$1}" value="${3}">
+endsnippet
+
+snippet input:number
+	<input type="number" name="${1}" id="${2:$1}" value="${3}">
+endsnippet
+
+snippet input:password
+	<input type="password" name="${1}" id="${2:$1}" value="${3}">
+endsnippet
+
+snippet input:range
+	<input type="range" name="${1}" id="${2:$1}" value="${3}">
+endsnippet
+
+snippet input:reset
+	<input type="reset" name="${1}" id="${2:$1}" value="${3}">
+endsnippet
+
+snippet input:search
+	<input type="search" name="${1}" id="${2:$1}" value="${3}">
+endsnippet
+
+snippet input:time
+	<input type="time" name="${1}" id="${2:$1}" value="${3}">
+endsnippet
+
+snippet input:url
+	<input type="url" name="${1}" id="${2:$1}" value="${3}">
+endsnippet
+
+
+
+
+snippet label
+	<label for="${0:$1}">${1}</label>
+endsnippet
+
+snippet label:i
+	<label for="${2:$1}">${1}</label>
+	<input type="${3:text/submit/hidden/button}" name="${4:$2}" id="${5:$2}" value="${6}" />
+endsnippet
+
+snippet label:s
+	<label for="${2:$1}">${1}</label>
+	<select name="${3:$2}" id="${4:$2}">
+		<option value="${5}">${0:$5}</option>
+	</select>
+endsnippet
+
+
+snippet li
+	<li>${0}</li>
+endsnippet
+
+snippet li.
+	<li class="${1}">${0}</li>
+endsnippet
+
+snippet lia
+	<li><a href="${0:#}">${1}</a></li>
+endsnippet
+
+
+
+snippet link:s
+	<link rel="stylesheet" href="${1:style.css}">
+endsnippet
+
+snippet link:css
+	<link rel="stylesheet" href="${1:style.css}" type="text/css" media="${2:all}">
+endsnippet
+
+
+snippet nav
+	<nav>
+		${0}
+	</nav>
+endsnippet
+
+snippet nav.
+	<nav class="${1}">
+		${0}
+	</nav>
+endsnippet
+
+snippet nav#
+	<nav id="${1}">
+		${0}
+	</nav>
+endsnippet
+
+
+snippet ol
+	<ol>
+		${0}
+	</ol>
+endsnippet
+
+snippet ol.
+	<ol class="${1}">
+		${0}
+	</ol>
+endsnippet
+
+snippet ol#
+	<ol id="${1}">
+		${0}
+	</ol>
+endsnippet
+
+
+snippet p
+	<p>${0}</p>
+endsnippet
+
+snippet p.
+	<p class="${1}">${0}</p>
+endsnippet
+
+snippet p#
+	<p id="${1}">${0}</p>
+endsnippet
+
+
+snippet scripts
+	<script src="${0}.js"></script>
+endsnippet
+
+
+
+snippet section
+	<section>
+		${0}
+	</section>
+endsnippet
+
+snippet section.
+	<section class="${1}">
+		${0}
+	</section>
+endsnippet
+
+snippet section#
+	<section id="${1}">
+		${0}
+	</section>
+endsnippet
+
+
+snippet span
+	<span>${0}</span>
+endsnippet
+
+snippet span.
+	<span class="${1}">${0}</span>
+endsnippet
+
+snippet span#
+	<span id="${1}">${0}</span>
+endsnippet
+
+
+
+snippet ul
+	<ul>
+		${0}
+	</ul>
+endsnippet
+
+snippet ul.
+	<ul class="${1}">
+		${0}
+	</ul>
+endsnippet
+
+snippet ul#
+	<ul id="${1}">
+		${0}
+	</ul>
+endsnippet
+
+

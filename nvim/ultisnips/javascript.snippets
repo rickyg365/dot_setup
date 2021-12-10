@@ -1,0 +1,161 @@
+# Function
+snippet fun "function"
+	function ${1:function_name}(${2}) {
+		${0:${VISUAL}}
+	}
+endsnippet
+
+# Asynchronous Function
+snippet asf "async function"
+	async function ${1:function_name}(${2}) {
+		${0:${VISUAL}}
+	}
+endsnippet
+
+
+# Flow control
+# if
+snippet if "if (condition) { ... }"
+	if (${1:true}) {
+		${0:${VISUAL}}
+	}
+endsnippet
+
+# if ... else
+snippet ife "if (condition) { ... } else { ... }"
+	if (${1:true}) {
+		${0:${VISUAL}}
+	} else {
+		${2}
+	}
+endsnippet
+
+# tertiary conditional
+snippet ter
+	${1:/* condition */} ? ${2:/* if true */} : ${0:/* if false */}
+endsnippet
+
+# switch
+snippet switch
+	switch (${1:expression}) {
+		case '${3:case}':
+			${4}
+			break;
+		${0}
+		default:
+			${2}
+	}
+endsnippet
+
+snippet case "case 'xyz': ... break"
+	case '${1:case}':
+		${0:${VISUAL}}
+		break;
+endsnippet
+
+snippet try "try { ... } catch(e) { ... }"
+	try {
+		${0:${VISUAL}}
+	} catch (${1:e}) {
+		${2:/* handle error */}
+	}
+endsnippet
+
+
+
+# return
+snippet ret
+	return ${0:result};
+endsnippet
+
+snippet for "for (...) {...}"
+	for (let ${1:i} = 0, ${2:len} = ${3:Things.length}; $1 < $2; $1++) {
+		${0:${VISUAL}}
+	}
+endsnippet
+
+snippet forr "reversed for (...) {...}"
+	for (let ${2:i} = ${1:Things.length} - 1; $2 >= 0; $2--) {
+		${0:${VISUAL}}
+	}
+endsnippet
+
+snippet wh "(condition) { ... }"
+	while (${1:/* condition */}) {
+		${0:${VISUAL}}
+	}
+endsnippet
+
+
+# For in loop
+snippet fori
+	for (let ${1:prop} in ${2:object}) {
+		${0:$2[$1]}
+	}
+endsnippet
+
+
+# JSON.parse
+snippet jsonp
+	JSON.parse(${0:jstr});
+endsnippet
+
+# JSON.stringify
+snippet jsons
+	JSON.stringify(${0:object});
+endsnippet
+
+# DOM selectors
+# Get elements
+snippet get
+	getElementsBy${1:TagName}('${0}')
+endsnippet
+
+# Get element
+snippet gett
+	getElementBy${1:Id}('${0}')
+endsnippet
+
+# Elements by class
+snippet by.
+	${1:document}.getElementsByClassName('${0:class}')
+endsnippet
+
+# Element by ID
+snippet by#
+	${1:document}.getElementById('${0:element ID}')
+endsnippet
+
+
+
+snippet cl "console.log"
+	console.log(${0});
+endsnippet
+
+
+
+snippet let
+	let ${1} = ${0};
+endsnippet
+
+snippet im "import xyz from 'xyz'"
+	import ${1} from '${2:$1}';
+
+endsnippet
+
+snippet imm "import { member } from 'xyz'"
+	import { ${1} } from '${2}';
+endsnippet
+
+
+snippet =>
+	(${1}) => {
+		${0:${VISUAL}}
+	}
+endsnippet
+
+
+snippet af "() =>"
+	(${1}) => ${0:${VISUAL}}
+endsnippet
+
