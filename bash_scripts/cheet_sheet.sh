@@ -27,6 +27,7 @@ if printf $languages | grep -qs $selected; then
     curl cht.sh/$selected/`echo "$query" | tr ' ' '+'`
 else
     # Core util
+    echo "core"
     curl cht.sh/$selected~$query
 fi
 
