@@ -10,25 +10,27 @@
 
 # Options
 languages=`echo "rust python javascript nodejs typescript c cpp" | tr ' ' '\n'`
-core_utils=`echo "xargs find mv sed awk" | tr ' ' '\n'`
 
-selected=`printf "$languages\n$core_utils" | fzf`
+selected=`printf "$languages" | fzf`
 echo "selected $selected"
 
 read -p "query: " query
 echo "$query"
 
-if printf $languages | grep -qs $selected; then
+echo "curl cht.sh/$selected/`echo $query | tr ' ' '+'`"
+command="curl cht.sh/$selected/`echo $query | tr ' ' '+'`"
+# tmux send-keys -t 'Main' 'clear && ls' C-m "$command" C-m 
+curl cht.sh/$selected/`echo "$query" | tr ' ' '+'`
 
-    # Start up work directory
-    echo "curl cht.sh/$selected/`echo $query | tr ' ' '+'`"
-    command="curl cht.sh/$selected/`echo $query | tr ' ' '+'`"
-    # tmux send-keys -t 'Main' 'clear && ls' C-m "$command" C-m 
-    curl cht.sh/$selected/`echo "$query" | tr ' ' '+'`
-else
-    # Core util
-    echo "core"
-    curl cht.sh/$selected~$query
-fi
+
+# if printf $languages | grep -qs $selected; then
+
+#     # Start up work directory
+    
+# else
+#     # Core util
+#     echo "core"
+#     curl cht.sh/$selected~$query
+# fi
 
 
