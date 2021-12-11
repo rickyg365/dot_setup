@@ -24,7 +24,7 @@ if printf $languages | grep -qs $selected; then
     echo "curl cht.sh/$selected/`echo $query | tr ' ' '+'`"
     command="curl cht.sh/$selected/`echo $query | tr ' ' '+'`"
     # tmux send-keys -t 'Main' 'clear && ls' C-m "$command" C-m 
-    curl cht.sh/$selected/`echo $query | tr ' ' '+'`
+    curl cht.sh/$selected/`echo "$query" | tr ' ' '+'`
 else
     # Core util
     curl cht.sh/$selected~$query
