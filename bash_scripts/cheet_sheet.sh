@@ -13,9 +13,10 @@ languages=`echo "rust python javascript nodejs typescript c cpp" | tr ' ' '\n'`
 core_utils=`echo "xargs find mv sed awk" | tr ' ' '\n'`
 
 selected=`printf "$languages\n$core_utils" | fzf`
-# echo "selected $selected"
+echo "selected $selected"
 
 read -p "query: " query
+echo "$query"
 
 if printf $languages | grep -qs $selected; then
 
