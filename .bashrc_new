@@ -103,7 +103,6 @@ source $OSH/oh-my-bash.sh
 
 
 # Custom Config
-clear
 
 # Add paths
 export PATH="$PATH:~/scripts"
@@ -118,6 +117,8 @@ alias nav=". nav.sh"
 alias mnav=". mnav.sh"
 alias fnav=". f_nav.sh"
 
+alias init=". init_ssh.sh"
+
 ## > Not Sourced
 alias allmightypull="all_pull.sh"
 alias gitgud="gitgud.sh"
@@ -130,6 +131,10 @@ alias ta="tmux a"
 alias cht="tmux new-session -d -s 'cheet sheet' && tmux send-keys -t 'cheet sheet' cheet_sheet.sh C-m && tmux a"
 alias cls="clear && ls"
 alias cll="clear && ll"
+
+# 
+
+clear
 
 # Start up
 date
