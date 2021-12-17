@@ -1,0 +1,26 @@
+#!/usr/bin/python
+import os
+import sys
+
+from rich.console import Console 
+from rich.markdown import Markdown
+
+
+def display_readme(file_path, console):
+    try:
+        with open(file_path, "r") as readme:
+            markdown = Markdown(readme.read())
+        console.print(markdown)    
+    except FileNotFoundError:
+        print("[ file not found ]")
+
+
+if __name__ == "__main__":
+    rich_console = Console()
+
+    file = "README.md"
+
+    if len(sys.argv) == 2:
+        file = sys.argv[1]
+
+    display_readme(file, rich_console)
