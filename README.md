@@ -2,7 +2,7 @@
 
 my termux setup
 
-## Using
+## Dependencies
 
 -   oh-my-bash
 -   bash
