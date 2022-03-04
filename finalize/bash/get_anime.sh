@@ -1,12 +1,21 @@
 #!/bin/bash
 
-get_anime() {
-    cd "/data/data/com.termux/files/home/storage/downloads/anime"
-
-    TITLE=$1
-    mkdir $TITLE && cd $TITLE
-    ani-cli -d $TITLE
-
-    printf "[ Done ]"
-
+check_dir() {
+    [ ! -d $1 ] && mkdir -p $1
 }
+
+DEFAULT="~/anime"
+TERMUX_ABS="/data/data/com.termux/files/home/storage/downloads/anime"
+
+CDIR="~/downloads/anime"
+
+# GoTo anime dir path
+check_dir($CDIR) && cd $CDIR
+
+# GoTo/Create title dir
+TITLE=$1
+check_dir($TITLE) && cd $TITLE
+
+ani-cli -d $TITLE
+
+# printf "[ Done ]"

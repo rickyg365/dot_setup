@@ -8,7 +8,7 @@ sleep 1
 
 # Loops through git directories, then refreshes each
 for file in */.git; do
-	# cd to correct path
+	# cd to correct path in subshell
 	(cd $file/..; 
 	# show current dir
 	printf '\n[ %s ]:\n' "${PWD##*/}";

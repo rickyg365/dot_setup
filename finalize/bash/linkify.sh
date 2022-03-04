@@ -7,6 +7,10 @@ if [[ $# -ne 2 ]]; then
     exit 1
 fi
 
+
+TERMUX_PATH=$PREFIX/bin
+DEFAULT_PATH=~/../../usr/bin
+
 BIN_PATH=$PREFIX/bin
 OG_FILE=$1
 NEW_NAME=$2
