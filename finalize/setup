@@ -1,9 +1,9 @@
 #!/bin/bash
 
-scripts_dir=~/scripts
+scripts_dir="$HOME/scripts"
 current_bash=".bashrc_default"
-ALIAS_FILE=~/.bash_aliases
-FN_FILE=~/.bash_functions
+ALIAS_FILE="$HOME/.bash_aliases"
+FN_FILE="$HOME/.bash_functions"
 
 # Check scripts dir
 [ ! -d $scripts_dir ] && mkdir -p $scripts_dir
