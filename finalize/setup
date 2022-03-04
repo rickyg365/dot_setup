@@ -1,13 +1,28 @@
 #!/bin/bash
 
-scripts_dir="~/scripts"
+scripts_dir=~/scripts
 current_bash=".bashrc_default"
+ALIAS_FILE=~/.bash_aliases
+FN_FILE=~/.bash_functions
 
 # Check scripts dir
 [ ! -d $scripts_dir ] && mkdir -p $scripts_dir
 
 # copy .sh files to scripts dir
-cp bash/*.sh ${scripts_dir}
+cp bash/*.sh $scripts_dir
+
+# Check file dir
+if [ -f $ALIAS_FILE ]; then
+    cat .bash_aliases >> $ALIAS_FILE
+else
+    cp .bash_aliases $ALIAS_FILE
+fi
+
+if [ -f $FN_FILE ]; then
+    cat .bash_functions >> $FN_FILE
+else
+    cp .bash_functions >> $FN_FILE
+fi
 
 # cp .bashrc to home dir
 cat ${current_bash} >> ~/.bashrc
