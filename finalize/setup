@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# scripts_dir=~/scripts/
-# current_bash=".bashrc_new"
+scripts_dir="~/scripts"
+current_bash=".bashrc_default"
 
-scripts_dir=$1
-current_bash=$2
+# Check scripts dir
+[ ! -d $scripts_dir ] && mkdir -p $scripts_dir
 
 # copy .sh files to scripts dir
 cp bash_scripts/*.sh ${scripts_dir}
