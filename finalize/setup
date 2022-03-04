@@ -10,4 +10,4 @@ current_bash=".bashrc_default"
 cp bash_scripts/*.sh ${scripts_dir}
 
 # cp .bashrc to home dir
-cp ${current_bash} ~/.bashrc
+cat ${current_bash} >> ~/.bashrc
