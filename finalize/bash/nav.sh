@@ -23,7 +23,7 @@ fi
 
 # if 1 arg, do nav functionality
 if [ $# -eq 1 ]; then
-    CHOSEN="{$1}"
+    CHOSEN="$1"
 fi
 
 case $CHOSEN in
