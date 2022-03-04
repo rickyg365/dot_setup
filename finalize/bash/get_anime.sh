@@ -1,8 +1,6 @@
 #!/bin/bash
 
-check_dir() {
-    [ ! -d $1 ] && mkdir -p $1
-}
+# Relies on check dir function
 
 TERMUX_ABS="/data/data/com.termux/files/home/storage/downloads/anime"
 
