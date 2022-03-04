@@ -7,7 +7,7 @@ current_bash=".bashrc_default"
 [ ! -d $scripts_dir ] && mkdir -p $scripts_dir
 
 # copy .sh files to scripts dir
-cp bash_scripts/*.sh ${scripts_dir}
+cp bash/*.sh ${scripts_dir}
 
 # cp .bashrc to home dir
 cat ${current_bash} >> ~/.bashrc
