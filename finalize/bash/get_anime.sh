@@ -7,7 +7,7 @@ check_dir() {
 DEFAULT="~/anime"
 TERMUX_ABS="/data/data/com.termux/files/home/storage/downloads/anime"
 
-CDIR="~/downloads/anime"
+CDIR="$HOME/downloads/anime"
 
 # GoTo anime dir path
 check_dir($CDIR) && cd $CDIR
