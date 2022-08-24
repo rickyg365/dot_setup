@@ -1,0 +1,6 @@
+/home/rg3/rust
+/home/rg3/python/fullscreen_youtube
+/home/rg3/python
+/home/rg3/github
+/home/rg3/downloads/anime
+/home/rg3/github/dot_setup/finalize
