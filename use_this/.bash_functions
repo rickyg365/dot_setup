@@ -12,7 +12,7 @@ savesh() {
     SHORT_PATH="~/scripts/"
     SHORT_FILE="~/scripts/shortcut_list.txt"
 
-    # Add check
+    # Check if dir and file exists
     check_dir($SHORT_PATH)
     check_file($SHORT_FILE)
     # Append

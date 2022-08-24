@@ -186,31 +186,6 @@ clear
 
 # Start up
 date
-neofetch
-# curl -s wttr.in/Moon?0
-curl -s wttr.in/San+Francisco?0
-echo ""
-ls
-# Paths
-export PATH="$PATH:~/scripts"
-
-# Load in Functions
-if [ -f ~/.bash_functions ]; then
-    . ~/.bash_functions
-fi
-# . shortcuts.sh
-
-# Aliases
-# Load in Aliases
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
-
-# Pre Start up 
-clear
-
-# Start up
-date
 # neofetch
 # curl -s wttr.in/Moon?0
 curl -s wttr.in/San+Francisco?0
